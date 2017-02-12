@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class TasksTrigger {
 
-    /** Every 30 minutes from 9:00 AM to 9:00 PM */
-    @Scheduled(cron = "0 0/30 9-21 * * *")
+    /** Every 5 minutes from 9:00 AM to 9:00 PM */
+    @Scheduled(cron = "0 0/5 9-21 * * *")
     public void SmsTaskTrigger() {
         smsSenderTask.startTask();
     }

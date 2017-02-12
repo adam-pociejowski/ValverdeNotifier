@@ -3,10 +3,12 @@ package com.valverde.rest;
 import com.valverde.dto.EmailDTO;
 import com.valverde.dto.SmsDTO;
 import com.valverde.service.SmsService;
+import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
+@CommonsLog
 @RestController
 @RequestMapping("/notifier/rest")
 public class NotifierRestController {
@@ -15,6 +17,7 @@ public class NotifierRestController {
     public HttpStatus sendSms(@RequestBody SmsDTO smsDTO) {
         try {
             smsService.sendAsync(smsDTO);
+            log.info("Sms successfully added to sending queue.");
             return HttpStatus.OK;
         } catch (Exception e) {
             return HttpStatus.INTERNAL_SERVER_ERROR;
