@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.springframework.org/schema/mvc">
+<head>
+    <link th:href="@{/bootstrap-3.3.7-dist/css/bootstrap.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{/css/page-style.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{/css/nav-style.css}" type="text/css" rel="stylesheet"/>
+    <link th:href="@{https://fonts.googleapis.com/css?family=Lato}" rel="stylesheet"/>
+    <meta charset="UTF-8"/>
+    <title>Valverde Admin</title>
+</head>
+<body ng-app="App" ng-controller="AppController" ng-cloak="true">
+<div id="custom-bootstrap-menu" class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header"><a class="navbar-brand">ValverdeNotifier</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-menubuilder">
+            <ul class="nav navbar-nav navbar-left">
+                <li ng-click="goToLocation(item)" ng-repeat="item in menu.items" ng-class="{'active-menu-item' : isActiveItem(item)}">
+                    <a>{{item}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div style="margin-top: 100px;" id="content" ng-view="true"></div>
+
+<!-- Base libraries -->
+<script th:src="@{/js/jquery-3.1.0.min.js}" type="text/javascript"></script>
+<script th:src="@{/bootstrap-3.3.7-dist/js/bootstrap.js}" type="text/javascript"></script>
+<script th:src="@{/angular-1.5.8/angular.js}" type="text/javascript"></script>
+<script th:src="@{/angular-1.5.8/angular-resource.js}" type="text/javascript"></script>
+<script th:src="@{/angular-1.5.8/angular-route.js}" type="text/javascript"></script>
+<script th:src="@{/angular-1.5.8/angular-aria.js}" type="text/javascript"></script>
+<script th:src="@{/angular-1.5.8/angular-animate.js}" type="text/javascript"></script>
+
+<!-- Controllers -->
+<script th:src="@{/js/app.js}" type="text/javascript"></script>
+<script th:src="@{/js/controller/app_controller.js}" type="text/javascript"></script>
+<script th:src="@{/js/controller/login_controller.js}" type="text/javascript"></script>
+<script th:src="@{/js/controller/sms_view_controller.js}" type="text/javascript"></script>
+
+<!-- Services -->
+<script th:src="@{/js/service/auth_service.js}" type="text/javascript"></script>
+<script th:src="@{/js/service/sms_view_service.js}" type="text/javascript"></script>
+
+</body>
+</html>

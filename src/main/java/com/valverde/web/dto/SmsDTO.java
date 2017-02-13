@@ -1,4 +1,4 @@
-package com.valverde.dto;
+package com.valverde.web.dto;
 
 import lombok.Data;
 

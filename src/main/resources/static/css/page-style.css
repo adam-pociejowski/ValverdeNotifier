@@ -1,0 +1,15 @@
+.login-panel {
+    min-width: 350px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.font-medium {
+    font-size: 16px;
+}
+
+.font-large {
+    font-size: 20px;
+}

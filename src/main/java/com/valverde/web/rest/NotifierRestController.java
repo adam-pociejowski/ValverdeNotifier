@@ -1,7 +1,7 @@
-package com.valverde.rest;
+package com.valverde.web.rest;
 
-import com.valverde.dto.EmailDTO;
-import com.valverde.dto.SmsDTO;
+import com.valverde.web.dto.EmailDTO;
+import com.valverde.web.dto.SmsDTO;
 import com.valverde.service.SmsService;
 import lombok.extern.apachecommons.CommonsLog;
 import org.springframework.beans.factory.annotation.Autowired;

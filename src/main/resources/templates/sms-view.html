@@ -1,0 +1,29 @@
+<div ng-init="init()">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="panel panel-primary font-medium">
+                <div class="panel-heading font-large bold">Sms history</div>
+                <table class="table">
+                    <thead class="bold">
+                        <th>Insert date</th>
+                        <th>Send date</th>
+                        <th>Message</th>
+                        <th>Recipients</th>
+                        <th>State</th>
+                        <th>Send Attempts</th>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="stat in stats">
+                        <td>{{stat.insertDate | date : 'yyyy-MM-dd hh:mm:ss'}}</td>
+                        <td>{{stat.sentDate | date : 'yyyy-MM-dd hh:mm:ss'}}</td>
+                        <td>{{stat.message}}</td>
+                        <td>{{stat.recipients}}</td>
+                        <td>{{stat.state}}</td>
+                        <td>{{stat.sendAttempts}}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,6 @@
 package com.valverde.service;
 
-import com.valverde.dto.SmsDTO;
+import com.valverde.web.dto.SmsDTO;
 import com.valverde.entity.Sms;
 import com.valverde.enums.State;
 import com.valverde.repository.SmsRepository;
