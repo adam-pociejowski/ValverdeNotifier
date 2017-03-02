@@ -1,4 +1,4 @@
-package com.valverde.healthchecker.dto;
+package com.valverde.healthchecker;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

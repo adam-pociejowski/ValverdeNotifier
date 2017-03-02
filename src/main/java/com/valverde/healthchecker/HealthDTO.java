@@ -1,7 +1,7 @@
-package com.valverde.healthchecker.dto;
+package com.valverde.healthchecker;
 
-import com.valverde.healthchecker.enums.HealthState;
 import lombok.Data;
+
 import java.util.ArrayList;
 import java.util.List;
 
