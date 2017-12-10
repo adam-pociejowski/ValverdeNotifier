@@ -8,12 +8,15 @@ pipeline {
             }
         }
 
+        stage ('Test Stage') {
+             steps {
+                 sh 'mvn test'
+             }
+        }
+
         stage ('Deploy Stage') {
             steps {
-                 sh '
-                 pwd=$(pwd)
-                 echo $pwd
-                 /home/valverde/scripts/notifier-run.sh'
+                 sh '/home/valverde/scripts/jenkins/notifier.sh'
             }
         }
     }
