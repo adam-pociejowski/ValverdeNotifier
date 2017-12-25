@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @CommonsLog
 @RestController
-@RequestMapping("/notifier/rest")
+@RequestMapping("/rest/notifier/")
 public class NotifierRestController {
 
     @PostMapping("/sms")
